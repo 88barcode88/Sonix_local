@@ -1,0 +1,18 @@
+# Binárky se NIKDY necommitují do repa — publikují se jako GitHub Release assety.
+# Důvod: GitHub blokuje soubory > 100 MB v git stromu a tyhle buildy mají 90–126 MB.
+*.exe
+*.dmg
+*.zip
+*.blockmap
+*.AppImage
+*.pkg
+
+# Případné lokální kopie hashů (finální verze patří k Release jako SHA256SUMS.txt)
+SHA256SUMS*.txt
+
+# OS / editor smetí
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
