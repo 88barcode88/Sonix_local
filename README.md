@@ -10,15 +10,15 @@ Local Sonix je lokální desktopová aplikace pro diktování a realtime přepis
 
 ## Stáhnout aplikaci
 
-Hotové soubory najdeš v sekci **[Releases](../../releases)**. **Nestahuj** zelené tlačítko `Code -> Download ZIP` - to je jen pro vývojáře.
+Aktuální verze **[0.2.2](https://github.com/88barcode88/Sonix_local/releases/tag/v0.2.2)**: [Windows Portable](https://github.com/88barcode88/Sonix_local/releases/download/v0.2.2/Local_Sonix-Portable-0.2.2-x64.exe) · [Mac DMG](https://github.com/88barcode88/Sonix_local/releases/download/v0.2.2/Local_Sonix-0.2.2-arm64.dmg). Všechny soubory najdeš v **[Releases](../../releases)**. **Nestahuj** zelené tlačítko `Code -> Download ZIP` - to je jen pro vývojáře.
 
 ### Windows
 
 | Soubor | Pro koho |
 |--------|----------|
-| `Local.Sonix-Portable-0.1.55-x64.exe` | **Doporučeno** - stáhnout a rovnou spustit, nic se neinstaluje |
-| `Local.Sonix-Setup-0.1.55-x64.exe` | Klasický instalátor se zástupcem v nabídce Start |
-| `Local.Sonix-0.1.55-win.zip` | Rozbalit a spustit `Local Sonix.exe` |
+| `Local_Sonix-Portable-0.2.2-x64.exe` | **Doporučeno** - stáhnout a rovnou spustit, nic se neinstaluje |
+| `Local_Sonix-Setup-0.2.2-x64.exe` | Klasický instalátor se zástupcem v nabídce Start |
+| `Local_Sonix-0.2.2-win.zip` | Rozbalit a spustit `Local Sonix.exe` |
 
 Build je nepodepsaný, takže Windows SmartScreen nebo antivirus může při prvním spuštění zobrazit varování o neznámém vydavateli. Není to virus - aplikace jen nemá placený podpisový certifikát. Klikni na `Více informací -> Přesto spustit`.
 
@@ -26,8 +26,8 @@ Build je nepodepsaný, takže Windows SmartScreen nebo antivirus může při prv
 
 | Soubor | Pro koho |
 |--------|----------|
-| `Local.Sonix-0.1.55-arm64.dmg` | **Doporučeno** - otevři a přetáhni aplikaci do Aplikací |
-| `Local.Sonix-0.1.55-arm64-mac.zip` | Doplňková varianta |
+| `Local_Sonix-0.2.2-arm64.dmg` | **Doporučeno** - otevři a přetáhni aplikaci do Aplikací |
+| `Local_Sonix-0.2.2-arm64-mac.zip` | Doplňková varianta |
 
 Je to **unsigned beta**, takže macOS Gatekeeper aplikaci napoprvé zablokuje. Spusť ji takto: v `Aplikace` na ikonu **pravý klik -> Otevřít -> Otevřít**. Stačí jednou, pak už půjde spouštět normálně.
 
@@ -46,19 +46,19 @@ Je to **unsigned beta**, takže macOS Gatekeeper aplikaci napoprvé zablokuje. S
 
 ## Ověření staženého souboru (SHA256)
 
-Ke každému vydání je v Releases přiložený `SHA256SUMS.txt`.
+Ke každému vydání je v Releases přiložený `SHA256SUMS-win.txt` (Windows) / `SHA256SUMS-mac.txt` (macOS).
 
 ```powershell
 # Windows (PowerShell)
-Get-FileHash ".\Local.Sonix-Portable-0.1.55-x64.exe" -Algorithm SHA256
+Get-FileHash ".\Local_Sonix-Portable-0.2.2-x64.exe" -Algorithm SHA256
 ```
 
 ```bash
 # macOS / Linux
-shasum -a 256 "Local.Sonix-0.1.55-arm64.dmg"
+shasum -a 256 "Local_Sonix-0.2.2-arm64.dmg"
 ```
 
-Hodnota musí sedět s příslušným řádkem v `SHA256SUMS.txt`.
+Hodnota musí sedět s příslušným řádkem v `SHA256SUMS-win.txt` (Windows) / `SHA256SUMS-mac.txt` (macOS).
 
 ---
 
@@ -68,15 +68,15 @@ Local Sonix is a local desktop app for dictation and real-time speech transcript
 
 ## Download The App
 
-Ready-to-use files are available in **[Releases](../../releases)**. Do **not** use the green `Code -> Download ZIP` button - that is only for developers.
+Current version **[0.2.2](https://github.com/88barcode88/Sonix_local/releases/tag/v0.2.2)**: [Windows Portable](https://github.com/88barcode88/Sonix_local/releases/download/v0.2.2/Local_Sonix-Portable-0.2.2-x64.exe) · [Mac DMG](https://github.com/88barcode88/Sonix_local/releases/download/v0.2.2/Local_Sonix-0.2.2-arm64.dmg). All files are available in **[Releases](../../releases)**. Do **not** use the green `Code -> Download ZIP` button - that is only for developers.
 
 ### Windows
 
 | File | Use case |
 |------|----------|
-| `Local.Sonix-Portable-0.1.55-x64.exe` | **Recommended** - download and run, no installation needed |
-| `Local.Sonix-Setup-0.1.55-x64.exe` | Standard installer with Start menu shortcut |
-| `Local.Sonix-0.1.55-win.zip` | Unzip and run `Local Sonix.exe` |
+| `Local_Sonix-Portable-0.2.2-x64.exe` | **Recommended** - download and run, no installation needed |
+| `Local_Sonix-Setup-0.2.2-x64.exe` | Standard installer with Start menu shortcut |
+| `Local_Sonix-0.2.2-win.zip` | Unzip and run `Local Sonix.exe` |
 
 The build is unsigned, so Windows SmartScreen or antivirus software may show an unknown publisher warning on first launch. It is not a virus - the app simply does not have a paid code-signing certificate. Click `More info -> Run anyway`.
 
@@ -84,8 +84,8 @@ The build is unsigned, so Windows SmartScreen or antivirus software may show an 
 
 | File | Use case |
 |------|----------|
-| `Local.Sonix-0.1.55-arm64.dmg` | **Recommended** - open it and drag the app to Applications |
-| `Local.Sonix-0.1.55-arm64-mac.zip` | Alternative download |
+| `Local_Sonix-0.2.2-arm64.dmg` | **Recommended** - open it and drag the app to Applications |
+| `Local_Sonix-0.2.2-arm64-mac.zip` | Alternative download |
 
 This is an **unsigned beta**, so macOS Gatekeeper may block the app the first time. Open it like this: in `Applications`, **right-click the app -> Open -> Open**. You only need to do this once.
 
@@ -104,16 +104,16 @@ This is an **unsigned beta**, so macOS Gatekeeper may block the app the first ti
 
 ## Verify The Download (SHA256)
 
-Each release includes a `SHA256SUMS.txt` file.
+Each release includes a `SHA256SUMS-win.txt` (Windows) / `SHA256SUMS-mac.txt` (macOS) file.
 
 ```powershell
 # Windows (PowerShell)
-Get-FileHash ".\Local.Sonix-Portable-0.1.55-x64.exe" -Algorithm SHA256
+Get-FileHash ".\Local_Sonix-Portable-0.2.2-x64.exe" -Algorithm SHA256
 ```
 
 ```bash
 # macOS / Linux
-shasum -a 256 "Local.Sonix-0.1.55-arm64.dmg"
+shasum -a 256 "Local_Sonix-0.2.2-arm64.dmg"
 ```
 
-The result must match the corresponding line in `SHA256SUMS.txt`.
+The result must match the corresponding line in `SHA256SUMS-win.txt` (Windows) / `SHA256SUMS-mac.txt` (macOS).
