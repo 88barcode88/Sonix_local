@@ -84,6 +84,14 @@ Standardní globální Soniox endpoint zpracovává data v **USA**. EU projekt p
 
 Pro práci v jiném programu nejprve umísti kurzor do jeho textového pole a pak použij globální zkratku. Před odesláním nebo uložením text vždy zkontroluj, zejména jména, čísla a AI úpravy.
 
+## Historie a tři zkratky ve verzi 0.3.2
+
+Dokončené přepisy se ve výchozím stavu ukládají do **Historie** pouze v tomto počítači. Historie obsahuje původní text a poslední AI úpravu, žádné audio ani API klíče. Textová historie není šifrovaná. Ukládání vypneš v Nastavení nebo v Historii; starší záznamy zůstanou, dokud je výslovně nesmažeš.
+
+Záznam můžeš vložit zpět do přepisu nebo zvolit **Vložit a upravit AI**. AI akce odešle původní text nastavenému poskytovateli a zachová původní přepis. Obnovení z historie nespouští mikrofon a hotový text se automaticky nevkládá do jiného okna.
+
+V Nastavení jsou tři samostatné zkratky. Výchozí jsou **Ctrl/Cmd+Shift+Space** pro realtime, **Ctrl/Cmd+Shift+1** pro jednoduchý AI přepis a **Ctrl/Cmd+Shift+2** pro strukturovaný AI přepis. Dřívější vlastní zkratka zůstává pro realtime; při kolizi aplikace vybere pro nové zkratky jiné volné číslo. Všechny lze upravit. Během nahrávání kterákoli z těchto zkratek nahrávání zastaví; během zpracování se další stisk ignoruje.
+
 ## Přehled nastavení
 
 Nastavení mají záložky **Základ**, **Přepis** a **Výstup**. U klíčů, zkratky, slovníku a vlastní instrukce použij příslušné tlačítko pro uložení.
@@ -127,7 +135,7 @@ Volba **Vypnout Whisper po nečinnosti** určuje, jak dlouho model zůstane v pa
 
 - API klíče se ukládají šifrovaně v profilu tvého uživatele (Windows DPAPI / macOS Keychain).
 - Pro nahrávání aplikace potřebuje mikrofon; na Macu potřebuje pro automatické psaní a vkládání také oprávnění Zpřístupnění. Nepotřebuje kameru, polohu ani snímání obrazovky.
-- Historie diktování se neukládá, ukládají se jen souhrnné statistiky a tvůj slovník.
+- Textová historie se ve výchozím stavu ukládá pouze lokálně a není šifrovaná. Ukládání lze vypnout; jednotlivé záznamy i celou historii lze smazat. Audio se do historie neukládá.
 
 ## Ověření staženého souboru (SHA256)
 
@@ -135,12 +143,12 @@ Ke každému vydání je v Releases přiložený `SHA256SUMS-win.txt` (Windows) 
 
 ```powershell
 # Windows (PowerShell)
-Get-FileHash ".\Local_Sonix-Portable-0.2.2-x64.exe" -Algorithm SHA256
+Get-FileHash ".\Local_Sonix-Portable-0.3.2-x64.exe" -Algorithm SHA256
 ```
 
 ```bash
 # macOS / Linux
-shasum -a 256 "Local_Sonix-0.2.2-arm64.dmg"
+shasum -a 256 "Local_Sonix-0.3.2-arm64.dmg"
 ```
 
 Hodnota musí sedět s příslušným řádkem v `SHA256SUMS-win.txt` (Windows) / `SHA256SUMS-mac.txt` (macOS).

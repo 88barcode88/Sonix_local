@@ -84,6 +84,14 @@ See the [official Mistral guide](https://docs.mistral.ai/getting-started/quickst
 
 To dictate into another program, place the cursor in its text field before using the global hotkey. Review the result before sending or saving it, especially names, numbers and AI edits.
 
+## History And Three Hotkeys In Version 0.3.2
+
+Completed transcripts are saved to **History** on this computer by default. History contains the original text and latest AI edit, with no audio or API keys. Text history is not encrypted. Disable saving in Settings or History; existing entries remain until explicitly deleted.
+
+Load an entry back into the transcript or select **Load and edit with AI**. The AI action sends the original text to your configured provider and preserves the original transcript. Restoring history does not start the microphone or automatically paste text into another app.
+
+Settings provides three separate hotkeys. Defaults are **Ctrl/Cmd+Shift+Space** for realtime, **Ctrl/Cmd+Shift+1** for simple AI transcription and **Ctrl/Cmd+Shift+2** for structured AI transcription. An existing custom hotkey remains assigned to realtime; conflicting new defaults use another available number. All three are configurable. During recording, any recording hotkey stops the session; additional presses during processing are ignored.
+
 ## Settings Guide
 
 Settings has **Basics**, **Transcription** and **Output** tabs. Use the corresponding save button for keys, the hotkey, dictionary and custom instruction.
@@ -127,7 +135,7 @@ The idle shutdown setting controls how long Whisper stays in memory between reco
 
 - API keys are stored encrypted in your user profile (Windows DPAPI / macOS Keychain).
 - Recording needs microphone access; automatic typing and pasting on Mac also require Accessibility permission. The app does not need camera, location, or screen capture access.
-- Dictation history is not stored. Only summary statistics and your dictionary are saved locally.
+- Text history is saved locally by default and is not encrypted. Saving can be disabled; individual entries or all history can be deleted. History stores no audio.
 
 ## Verify The Download (SHA256)
 
@@ -135,12 +143,12 @@ Each release includes a `SHA256SUMS-win.txt` (Windows) / `SHA256SUMS-mac.txt` (m
 
 ```powershell
 # Windows (PowerShell)
-Get-FileHash ".\Local_Sonix-Portable-0.2.2-x64.exe" -Algorithm SHA256
+Get-FileHash ".\Local_Sonix-Portable-0.3.2-x64.exe" -Algorithm SHA256
 ```
 
 ```bash
 # macOS / Linux
-shasum -a 256 "Local_Sonix-0.2.2-arm64.dmg"
+shasum -a 256 "Local_Sonix-0.3.2-arm64.dmg"
 ```
 
 The result must match the corresponding line in `SHA256SUMS-win.txt` (Windows) / `SHA256SUMS-mac.txt` (macOS).
